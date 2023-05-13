@@ -1,0 +1,53 @@
+.login_gen{
+    background: #1a1a1a;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+.bg-green {
+    height: 37vh;
+    background: rgb(3, 198, 143);
+}
+.login_icon{
+    display: flex;
+    color: white;
+    font-size: 10px;
+    align-items: center;
+}
+.login_container{
+    width: 80%;
+    margin: -200px auto;
+
+}
+.login_content{
+    background: #e2e1e1;
+    margin: 40px 0;
+    border-radius: 10px;
+    padding: 100px;
+    display: flex;
+}
+
+.login_instruction{
+    color: rgb(50, 49, 49);
+    word-wrap: break-word;
+    margin-right: 30px;
+}
+.login_instruction h1{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.login_instruction_list{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.login_instruction_list li{
+    margin: 10px 0;
+}
+.login-qrcode{
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}

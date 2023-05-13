@@ -1,0 +1,77 @@
+/* ============Contact Header=================== */
+
+.contacts_list{
+    border-right: 0.001em solid rgba(71, 71, 71, 0.412);
+}
+
+
+.contacts_header{
+    background: var(--content-bg);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_profile_img{
+    width: 50px;
+    cursor: pointer;
+}
+.contacts_navigations{
+    display: flex;
+    align-items: center; 
+}
+.contacts_navigations button:first-child{
+    margin: 5px 15px 0;
+}
+.contacts_navigations button{
+    background: transparent;
+    border: none;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+/* ============Contacts List================ */
+
+.contacts_body{
+    margin: 10px 0 0 0;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.contact_item{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.contact_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.contact_content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 0.01em solid rgba(78, 78, 78, 0.392);
+}
+.contact_name{
+    color: var(--primary-text);
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0 0 5px;
+}
+.contact_lastmessage{
+    color: var(--secondary-text);
+    font-size: 13px;
+    font-weight: 400;
+}
+.contact_lastmessage_time{
+    color: var(--secondary-text);
+    font-size: 12px;
+}

@@ -1,0 +1,11 @@
+.loggedIn_gen{
+    background: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+}
+
+.loggedIn_container{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 2fr 5fr;
+}
+
