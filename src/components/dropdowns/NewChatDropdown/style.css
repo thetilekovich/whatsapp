@@ -1,0 +1,21 @@
+.newchat_dropdown{
+    
+}
+
+.newchat_dropdown_header{
+    background: var(--content-bg);
+    padding: 40px 30px 20px;
+    display: flex;
+    align-items: center;
+
+}
+.newchat_dropdown_header h1{
+    color: var(--primary-text);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 20px;
+}
+.newchat_dropdown_body{
+    height: 100%;
+    background: var(--body-bg);
+}
