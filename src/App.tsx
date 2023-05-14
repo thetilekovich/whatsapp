@@ -1,4 +1,3 @@
-import { Route, Routes, useNavigate } from "react-router-dom"
 import { useAppSelector } from "./app/hooks"
 import LoginPage from "./pages/LoginPage"
 import UserPage from "./pages/UserPage"

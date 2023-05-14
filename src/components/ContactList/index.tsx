@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useAppSelector } from '../../app/hooks'
 import MessageIcon from '../../statics/icons/MessageIcon'
 import ThreeDots from '../../statics/icons/ThreeDots'
@@ -20,6 +20,7 @@ const ContactList = () => {
   const [profileDropdown, setProfileDropdown] = useState(false)
   const { chats, pendingUserChats } = useAppSelector(s => s.userDatas)
 
+
   return (
 
     <div className='contacts_list relative'>
@@ -29,7 +30,7 @@ const ContactList = () => {
           <img className='cursor-pointer w-14 rounded-full' src={placeholderImg} />
         </button>
         <nav className='flex items-center'>
-          <button  className='mx-5'
+          <button className='mx-5'
             onClick={() => setNewChatDropdown(prev => !prev)}>
             <MessageIcon />
           </button>
@@ -49,7 +50,7 @@ const ContactList = () => {
       <div>
 
         {
-          pendingUserChats ?<div className='h-[100vh] flex justify-center items-center'> <Loader /></div> :
+          pendingUserChats ? <div className='h-[100vh] flex justify-center items-center'> <Loader /></div> :
             <ul className='h-[100vh] overflow-y-scroll mt-3'>
               {
                 chats.map(el => (

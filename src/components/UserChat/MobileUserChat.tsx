@@ -19,7 +19,7 @@ const MobileUserChat = () => {
 
 
     return (
-        <div className={`absolute w-full h-full -right-full bg-body top-0 transition-[.7s] ${activeChat !== '0' ? 'absolute -translate-x-full' : null}`}>
+        <div className={`absolute w-full h-full -right-full bg-body top-0 duration-[0.7s] ${activeChat !== '0' ? 'absolute -translate-x-full' : null}`}>
             <header className='user_chat_header bg-content relative grid py-1 px-4'>
                 <div className='flex items-center'>
                     <button onClick={() => dispatch(setActiveChat('0'))}>

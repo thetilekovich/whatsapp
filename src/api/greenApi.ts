@@ -6,7 +6,8 @@ export const accountStatusApi = `https://api.green-api.com/waInstance${IdInstanc
 
 export const accountChatsApi = `https://api.green-api.com/waInstance${IdInstance}/GetContacts/${ApiTokenInstance}`
 
-
 export const contactInfoApi = `https://api.green-api.com/waInstance${IdInstance}/getContactInfo/${ApiTokenInstance}`
 
-export const logoutApi =  `https://api.green-api.com/waInstance${IdInstance}/Logout/${ApiTokenInstance}`
+export const logoutApi = `https://api.green-api.com/waInstance${IdInstance}/Logout/${ApiTokenInstance}`
+
+export const checkWhatsappApi = `https://api.green-api.com/waInstance${IdInstance}/CheckWhatsapp/${ApiTokenInstance}`

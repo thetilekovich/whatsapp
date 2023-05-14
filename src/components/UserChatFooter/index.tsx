@@ -1,4 +1,3 @@
-import React from 'react'
 import SendMessage from '../../statics/icons/SendMessage'
 
 const UserChatFooter = () => {

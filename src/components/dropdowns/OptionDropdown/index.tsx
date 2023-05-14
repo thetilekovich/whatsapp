@@ -1,4 +1,3 @@
-import React from 'react'
 import { useDispatch } from 'react-redux'
 import { logout } from '../../../app/actions/logout'
 import { setAuth } from '../../../app/slices/userSlice'
@@ -16,7 +15,7 @@ const OptionDropdown = ({setProfileDropdown}: {setProfileDropdown: (a: boolean) 
 
   return (
     <nav className='bg-content text-primary py-3 rounded-md'>
-        <ul className='option_dropdown cursor-pointer transition-[.2s] text-lg'>
+        <ul className='option_dropdown cursor-pointer transition-[0.2s] text-lg'>
             {/* <li>Новая группа</li> */}
             <li
             onClick={() => setProfileDropdown(true)}

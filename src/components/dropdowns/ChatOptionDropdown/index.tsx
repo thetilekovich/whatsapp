@@ -1,4 +1,3 @@
-import React from 'react'
 import { logout } from '../../../app/actions/logout'
 import { useAppDispatch } from '../../../app/hooks'
 import { setActiveChat } from '../../../app/slices/InterfaceSlice'
@@ -18,7 +17,7 @@ const ChatOptionDropdown = () => {
 
   return (
     <nav className='bg-content text-primary py-3 rounded-md'>
-      <ul className='option_dropdown cursor-pointer transition-[.2s] text-lg'>
+      <ul className='option_dropdown cursor-pointer duration-[.4s] text-lg'>
         {/* <li>Данные контакта</li> */}
         <li
           onClick={() => dispatch(setActiveChat('0'))}

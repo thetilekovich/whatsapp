@@ -1,4 +1,3 @@
-import React from 'react'
 import ChatNotActive from '../../statics/icons/ChatNotActive'
 
 const UserChatNotActive = () => {

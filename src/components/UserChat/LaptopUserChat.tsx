@@ -20,7 +20,7 @@ const LaptopUserChat = () => {
         activeContactChat[0] ?
             <div className='relative h-[100vh]'>
                 <header className='user_chat_header bg-content relative grid py-1 px-4'>
-                    <div className='flex items-center'>
+                    <div className='flex items-center cursor-pointer'>
                         <img
                             className='w-14 rounded-full mx-5'
                             src={placeholder} alt="" />
@@ -33,7 +33,7 @@ const LaptopUserChat = () => {
                     </button>
                     <div
                         onMouseLeave={() => setOptionDropdown(false)}
-                        className='absolute right-20 top-20'>
+                        className='absolute right-12 top-20'>
                         {
                             optionDropdown ? <ChatOptionDropdown /> : null
                         }
