@@ -1,11 +1,3 @@
-.loggedIn_gen{
-    background: var(--body-bg);
-    font-family: 'Roboto', sans-serif;
+.laptop_screen{
+    grid-template-columns: 4fr 7fr;    
 }
-
-.loggedIn_container{
-    display: grid;
-    margin: auto;
-    grid-template-columns: 2fr 5fr;
-}
-

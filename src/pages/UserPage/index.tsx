@@ -1,16 +1,28 @@
-import React from 'react'
+import { useEffect } from 'react'
+import { getAccountChats } from '../../app/actions/getAccountChats'
 import { useAppDispatch } from '../../app/hooks'
 import ContactList from '../../components/ContactList'
-import UserChat from '../../components/UserChat'
+import LaptopUserChat from '../../components/UserChat/LaptopUserChat'
+import MobileUserChat from '../../components/UserChat/MobileUserChat'
 import './style.css'
 
 const UserPage = () => {
+  const dispatch = useAppDispatch()
+  useEffect(() => {
+    setTimeout(() => dispatch(getAccountChats()), 5000)
+  }, [])
   return (
-    <div className='loggedIn_gen'>
-        <div className='loggedIn_container'>
-            <ContactList/>
-            <UserChat/>
+    <div className='bg-body'>
+      <div className='m-auto'>
+        <div className='laptop_screen hidden md:grid'>
+          <ContactList />
+          <LaptopUserChat />
         </div>
+        <div className='block md:hidden'>
+          <ContactList />
+          <MobileUserChat />
+        </div>
+      </div>
     </div>
   )
 }

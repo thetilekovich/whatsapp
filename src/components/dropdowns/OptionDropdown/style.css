@@ -1,18 +1,7 @@
-.option_dropdown{
-    background: var(--content-bg);
-    color: var(--primary-text);
-    padding: 10px 0;
-    border-radius: 5px;
-}
-.option_dropdown_list{
-    list-style: none;
-}
-.option_dropdown_list li{
-    padding: 10px 30px;
-    cursor: pointer;
-    font-size: 17px;
+
+.option_dropdown li{
     transition: .2s;
 }
-.option_dropdown_list li:hover{
+.option_dropdown li:hover{
     background: var(--body-bg);
 }

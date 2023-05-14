@@ -3,11 +3,33 @@ export type userSliceType = {
     activeChat: string,
 }
 
-export type contactsListType = {
+export type contactInfoType = {
+    chatId: string,
+    avatar: string,
+    name: string,
+    category: string,
+    email: string,
+    products: any,
+    lastSeen: string,
+    isArchive: string,
+    isDisappearing: string,
+    isMute: string,
+    messageExpiration: number,
+    muteExpiration: number
+}
+
+
+export type responseQrCode = {
+    type: string,
+    message: string,
+}
+
+export type accountStatusType = {
+    stateInstance: string,
+}
+
+export type accountChatsType = {
+    name: string,
     id: string,
-    img: any,
-    contactName: string,
-    lastMessage: string,
-    lastMessageTime: string,
-    newMessages?: number
+    type: string
 }

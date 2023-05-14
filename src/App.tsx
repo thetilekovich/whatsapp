@@ -7,7 +7,7 @@ const App = () => {
   const { auth } = useAppSelector(s => s.userSlice)
   
   return (
-    <div className="App container">
+    <div className="App">
       {
         auth ? <UserPage/> : <LoginPage/>
       }
