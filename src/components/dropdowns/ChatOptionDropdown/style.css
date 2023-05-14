@@ -1,0 +1,18 @@
+.chat_option_dropdown{
+    background: var(--content-bg);
+    color: var(--primary-text);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+.chat_option_dropdown_list{
+    list-style: none;
+}
+.chat_option_dropdown_list li{
+    padding: 10px 50px 10px 30px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: .2s;
+}
+.chat_option_dropdown_list li:hover{
+    background: var(--body-bg);
+}

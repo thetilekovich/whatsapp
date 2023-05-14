@@ -6,6 +6,7 @@ import placeholderImg from '../../statics/images/placeholderImg.png'
 import ContactListItem from '../ContactListItem'
 import NewChatDropDown from '../dropdowns/NewChatDropdown'
 import OptionDropdown from '../dropdowns/OptionDropdown'
+import ProfileInfoDropdown from '../dropdowns/ProfileInfoDropdown'
 import './style.css'
 
 
@@ -15,14 +16,17 @@ import './style.css'
 const ContactList = () => {
   const [optionDropdown, setOptionDropdown] = useState(false)
   const [newChatDropdown, setNewChatDropdown] = useState(false)
+  const [profileDropdown, setProfileDropdown] = useState(false)
 
 
   return (
     <div className='contacts_list'>
       <div className='contacts_header'>
-        <div className='contacts_header_profile'>
+        <button
+        onClick={() => setProfileDropdown(prev => !prev)}
+        className='contacts_header_profile'>
           <img className='header_profile_img' src={placeholderImg} />
-        </div>
+        </button>
         <nav className='contacts_navigations'>
           <button
             onClick={() => setNewChatDropdown(prev => !prev)}>
@@ -37,7 +41,7 @@ const ContactList = () => {
           onMouseLeave={() => setOptionDropdown(false)}
           className='option_dropdown_gen'>
           {
-            optionDropdown ? <OptionDropdown /> : null
+            optionDropdown ? <OptionDropdown setProfileDropdown={setProfileDropdown}/> : null
           }
         </div>
       </div>
@@ -48,10 +52,12 @@ const ContactList = () => {
           ))
         }
       </ul>
-      <div className={`${newChatDropdown ? 'newchat_dropdown_gen' : ''}`}>
-        <NewChatDropDown />
+      <div className={`dropdown_gen  ${newChatDropdown ? 'dropdown_gen_active' : ''}`}>
+        <NewChatDropDown setCloseDrop={setNewChatDropdown}/>
       </div>
-
+      <div className={`dropdown_gen  ${profileDropdown ? 'dropdown_gen_active' : ''}`}>
+        <ProfileInfoDropdown setCloseDrop={setProfileDropdown}/>
+      </div>
     </div>
   )
 }

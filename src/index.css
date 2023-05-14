@@ -23,10 +23,16 @@ code {
 
 :root{
   --content-bg: #233138;
+  --content-body-bg: #404f57;
   --secondary-content-bg: #2331387a;
   --body-bg: rgb(17,27,33);
   --outgoing-message-bg:  #0b846d;
   --income-message-bg: #676f73;
   --primary-text: rgba(233, 237, 239, 0.88);
   --secondary-text:#667781;
+}
+
+.App{ 
+  max-height: 100vh;
+  overflow-y: hidden;
 }

@@ -1,0 +1,33 @@
+.profile_dropdown{
+    height: 100%;
+}
+
+.profile_dropdown_header{
+    background: var(--content-bg);
+    padding: 40px 30px 20px;
+    display: flex;
+    align-items: center;
+
+}
+.profile_dropdown_header h1{
+    color: var(--primary-text);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 20px;
+}
+
+.profile_dropdown_prevbtn{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.profile_dropdown_body{
+    height: 88%;
+    width: 100%;
+    background: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0;
+}
