@@ -4,13 +4,13 @@ import { getChatsHistory } from "../../actions/getChatsHistory";
 
 
 
-type UserDatasInitialState = {
-    chatData:  chatHistoryType[] | null
+type UserChatInitialState = {
+    chatData: chatHistoryType[] | null
     pending: boolean,
-    error: null | string | undefined
+    error: any
 }
 
-const initialState: UserDatasInitialState = {
+const initialState: UserChatInitialState = {
     chatData: null,
     error: null,
     pending: false
@@ -27,16 +27,16 @@ const userChat = createSlice({
                 state.pending = true
                 state.error = null
             })
-            .addCase(getChatsHistory.rejected, (state, {payload})=> {
+            .addCase(getChatsHistory.rejected, (state, { payload }) => {
                 state.pending = false
                 state.error = payload
             })
-            .addCase(getChatsHistory.fulfilled, (state, {payload}) => {
+            .addCase(getChatsHistory.fulfilled, (state, { payload }) => {
                 state.pending = false
                 state.error = null
                 state.chatData = payload
             })
-        
+
     }
 })
 

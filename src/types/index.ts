@@ -37,6 +37,7 @@ export type accountChatsType = {
 
 export type chatHistoryType = {
     type: "incoming" | "outgoing",
+    textMessage: string,
     timestamp: number,
     idMessage: string,
     typeMessage: "imageMessage" | "textMessage" | any,

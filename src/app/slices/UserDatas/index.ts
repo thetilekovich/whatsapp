@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { accountChatsType, chatHistoryType, contactInfoType } from "../../../types";
+import { accountChatsType } from "../../../types";
 import { getAccountChats } from "../../actions/getAccountChats";
 
 
