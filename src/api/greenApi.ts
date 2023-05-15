@@ -11,3 +11,5 @@ export const contactInfoApi = `https://api.green-api.com/waInstance${IdInstance}
 export const logoutApi = `https://api.green-api.com/waInstance${IdInstance}/Logout/${ApiTokenInstance}`
 
 export const checkWhatsappApi = `https://api.green-api.com/waInstance${IdInstance}/CheckWhatsapp/${ApiTokenInstance}`
+
+export const chatHistoryApi = `https://api.green-api.com/waInstance${IdInstance}/GetChatHistory/${ApiTokenInstance}`

@@ -6,6 +6,7 @@ import ChatOptionDropdown from '../dropdowns/ChatOptionDropdown'
 import placeholder from '../../statics/images/placeholderImg.png'
 import UserChatNotActive from '../UserChatNotActive'
 import UserChatFooter from '../UserChatFooter'
+import UserChatBody from '../UserChatBody'
 
 
 
@@ -18,7 +19,7 @@ const LaptopUserChat = () => {
 
     return (
         activeContactChat[0] ?
-            <div className='relative h-[100vh]'>
+            <div className='relative h-[100vh] w-full'>
                 <header className='user_chat_header bg-content relative grid py-1 px-4'>
                     <div className='flex items-center cursor-pointer'>
                         <img
@@ -39,10 +40,7 @@ const LaptopUserChat = () => {
                         }
                     </div>
                 </header>
-                <section>
-                    {//body text chat
-                    }
-                </section>
+                <UserChatBody />
                 <UserChatFooter />
             </div> :
             <UserChatNotActive />

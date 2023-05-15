@@ -33,3 +33,16 @@ export type accountChatsType = {
     id: string,
     type: string
 }
+
+
+export type chatHistoryType = {
+    type: "incoming" | "outgoing",
+    timestamp: number,
+    idMessage: string,
+    typeMessage: "imageMessage" | "textMessage" | any,
+    chatId: string,
+    senderId: string,
+    senderName: string,
+    downloadUrl: string,
+    caption: string
+}

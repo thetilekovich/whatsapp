@@ -18,11 +18,10 @@ const ContactList = () => {
   const [optionDropdown, setOptionDropdown] = useState(false)
   const [newChatDropdown, setNewChatDropdown] = useState(false)
   const [profileDropdown, setProfileDropdown] = useState(false)
-  const { chats, pendingUserChats } = useAppSelector(s => s.userDatas)
+  const { chats, pending } = useAppSelector(s => s.userDatas)
 
 
   return (
-
     <div className='contacts_list relative'>
       <div className='flex justify-between items-center bg-content py-1 px-3'>
         <button
@@ -50,7 +49,7 @@ const ContactList = () => {
       <div>
 
         {
-          pendingUserChats ? <div className='h-[100vh] flex justify-center items-center'> <Loader /></div> :
+          pending ? <div className='h-[100vh] flex justify-center items-center'> <Loader /></div> :
             <ul className='h-[100vh] overflow-y-scroll mt-3'>
               {
                 chats.map(el => (

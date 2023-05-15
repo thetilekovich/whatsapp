@@ -8,9 +8,11 @@ import './style.css'
 
 const UserPage = () => {
   const dispatch = useAppDispatch()
+  
   useEffect(() => {
-    setTimeout(() => dispatch(getAccountChats()), 5000)
+    dispatch(getAccountChats())
   }, [])
+
   return (
     <div className='bg-body'>
       <div className='m-auto'>

@@ -7,6 +7,7 @@ import placeholder from '../../statics/images/placeholderImg.png'
 import UserChatFooter from '../UserChatFooter'
 import { setActiveChat } from '../../app/slices/InterfaceSlice'
 import ArrowPrev from '../../statics/icons/ArrowPrev'
+import UserChatBody from '../UserChatBody'
 
 
 
@@ -44,9 +45,7 @@ const MobileUserChat = () => {
                     }
                 </div>
             </header>
-            <section>
-
-            </section>
+            <UserChatBody />
             <UserChatFooter />
         </div>
     )
