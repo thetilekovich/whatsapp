@@ -13,3 +13,5 @@ export const logoutApi = `https://api.green-api.com/waInstance${IdInstance}/Logo
 export const checkWhatsappApi = `https://api.green-api.com/waInstance${IdInstance}/CheckWhatsapp/${ApiTokenInstance}`
 
 export const chatHistoryApi = `https://api.green-api.com/waInstance${IdInstance}/GetChatHistory/${ApiTokenInstance}`
+
+export const sendMessageApi = `https://api.green-api.com/waInstance${IdInstance}/SendMessage/${ApiTokenInstance}`

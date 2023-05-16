@@ -27,10 +27,7 @@ const userChat = createSlice({
                 state.pending = true
                 state.error = null
             })
-            .addCase(getChatsHistory.rejected, (state, { payload }) => {
-                state.pending = false
-                state.error = payload
-            })
+            
             .addCase(getChatsHistory.fulfilled, (state, { payload }) => {
                 state.pending = false
                 state.error = null

@@ -1,3 +1,8 @@
 .laptop_screen{
     grid-template-columns: 4fr 7fr;    
 }
+
+.mobile_screen{
+    width: 100%;
+    overflow: hidden;
+}

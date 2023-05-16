@@ -14,8 +14,7 @@ const LaptopUserChat = () => {
     const [optionDropdown, setOptionDropdown] = useState(false)
     const { activeChat } = useAppSelector(s => s.InterfaceSlice)
     const { chats } = useAppSelector(s => s.userDatas)
-    let activeContactChat = chats.filter(el => el.id === activeChat)
-
+    let activeContactChat = chats?.filter(el => el.id === activeChat) || []
 
     return (
         activeContactChat[0] ?
@@ -26,7 +25,8 @@ const LaptopUserChat = () => {
                             className='w-14 rounded-full mx-5'
                             src={placeholder} alt="" />
                         <h1 className='text-lg text-medium text-primary'>
-                            {activeContactChat[0]?.name.length > 20 ? activeContactChat[0]?.name.slice(0, 28) + "..." : activeContactChat[0]?.name}</h1>
+                            {activeContactChat[0]?.name.length > 20 ? activeContactChat[0]?.name.slice(0, 28) + "..." :
+                                activeContactChat[0]?.name}</h1>
                     </div>
                     <button
                         onClick={() => setOptionDropdown(prev => !prev)}>

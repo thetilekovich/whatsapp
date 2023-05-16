@@ -16,11 +16,16 @@ const MobileUserChat = () => {
     const { activeChat } = useAppSelector(s => s.InterfaceSlice)
     const { chats } = useAppSelector(s => s.userDatas)
     const dispatch = useAppDispatch()
-    let activeContactChat = chats.filter(el => el.id === activeChat)
+    let activeContactChat = chats?.filter(el => el.id === activeChat) || []
+
+    const contactTitle = activeContactChat.length ?
+        activeContactChat[0]?.name.length > 20 ?
+            activeContactChat[0]?.name.slice(0, 28) + "..." :
+            activeContactChat[0]?.name : '+' + activeChat.replace('@c.us', '')
 
 
     return (
-        <div className={`absolute w-full h-full -right-full bg-body top-0 duration-[0.7s] ${activeChat !== '0' ? 'absolute -translate-x-full' : null}`}>
+        <div className={`absolute w-full h-full -right-full bg-body top-0 duration-[.7s] ${activeChat !== '0' ? 'absolute -translate-x-full' : ''}`}>
             <header className='user_chat_header bg-content relative grid py-1 px-4'>
                 <div className='flex items-center'>
                     <button onClick={() => dispatch(setActiveChat('0'))}>
@@ -29,8 +34,7 @@ const MobileUserChat = () => {
                     <img
                         className='w-14 rounded-full mx-5'
                         src={placeholder} alt="" />
-                    <h1 className='text-xl text-medium text-primary'>
-                        {activeContactChat[0]?.name.length > 20 ? activeContactChat[0]?.name.slice(0, 28) + "..." : activeContactChat[0]?.name}</h1>
+                    <h1 className='text-xl text-medium text-primary'>{contactTitle}</h1>
                 </div>
                 <button
                     onClick={() => setOptionDropdown(prev => !prev)}

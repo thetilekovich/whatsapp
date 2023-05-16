@@ -1,21 +1,32 @@
 import { useState } from 'react'
+import { checkWhatsapp } from '../../../app/actions/checkWhatsapp'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
-import { setInputValue } from '../../../app/slices/InterfaceSlice'
+import { setActiveChat, setInputValue } from '../../../app/slices/InterfaceSlice'
 import ArrowPrev from '../../../statics/icons/ArrowPrev'
+import Loader from '../../Loader'
 
 
-const NewChatDropDown = ({ setCloseDrop }: { setCloseDrop: (a: boolean) => void }) => {
+const NewChatDropDown = ({ setNewChatDropdown }: { setNewChatDropdown: (a: boolean) => void }) => {
   const { newChatInputValue } = useAppSelector(s => s.InterfaceSlice)
+  const [hasWhatsapp, setHasWhatsaap] = useState<any>(null)
+  const [loading, setLoading] = useState(false)
   const dispatch = useAppDispatch()
 
-  const handleClickSearch = (phoneNumber: string) => {
+  const handleClickSearch = async (phoneNumber: string) => {
+    setLoading(true)
     if (phoneNumber.length > 10) {
-      if (phoneNumber.split('')[0] === '+') {
-        phoneNumber = phoneNumber.slice(1, -1)
+      phoneNumber = phoneNumber.split('+').join('')
+      const res = await checkWhatsapp(phoneNumber)
+      setHasWhatsaap(await res)
+      if (await hasWhatsapp) {
+        setNewChatDropdown(false)
+        dispatch(setActiveChat(phoneNumber + '@c.us'))
       } else {
-        
+        dispatch(setActiveChat('0'))
+        setNewChatDropdown(true)
       }
     }
+    setLoading(false)
   }
 
 
@@ -23,7 +34,7 @@ const NewChatDropDown = ({ setCloseDrop }: { setCloseDrop: (a: boolean) => void 
     <div className='h-full w-full overflow-hidden'>
       <header className='bg-content pt-10 pb-5 px-8 flex items-center'>
         <button
-          onClick={() => setCloseDrop(false)}>
+          onClick={() => setNewChatDropdown(false)}>
           <ArrowPrev />
         </button>
         <h1 className='text-primary text-2xl font-medium mx-5'>Новый чат</h1>
@@ -36,7 +47,18 @@ const NewChatDropDown = ({ setCloseDrop }: { setCloseDrop: (a: boolean) => void 
             className='bg-primary w-9/12 px-4 py-2' value={newChatInputValue} type="tel" />
           <button
             onClick={() => handleClickSearch(newChatInputValue)}
-            className='bg-primary w-3/12 px-4 py-2 hover:bg-content duration-[0.4s] hover:text-primary'>Найти</button>
+            className='bg-primary w-3/12 px-4 py-2 hover:bg-content duration-[0.4s] hover:text-primary'>{hasWhatsapp ? 'Написать' : 'Найти'}</button>
+        </div>
+        <div className='flex flex-col items-center justify-center  mt-14'>
+          {
+            hasWhatsapp || hasWhatsapp === null ? null : <h1 className='text-2xl text-red-600'>Number has not whatsapp</h1>
+          }
+          {
+            hasWhatsapp ? <h1 className='text-2xl text-green-600'>Found!</h1> : null
+          }
+          {
+            loading ? <Loader /> : null
+          }
         </div>
       </section>
     </div>

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { getChatsHistory } from "../../app/actions/getChatsHistory"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import IncomeMessage from "../IncomeMessage"
@@ -10,22 +10,26 @@ const UserChatBody = () => {
     const { pending, error, chatData } = useAppSelector(s => s.userChat)
     const dispatch = useAppDispatch()
 
+    const getChatHistoryFunc = () => {
+        if (activeChat !== '0') {
+            dispatch(getChatsHistory(activeChat))
+        }
+    }
+
     useEffect(() => {
-        dispatch(getChatsHistory(activeChat))
-    }, [activeChat])
+        getChatHistoryFunc()
+    }, [])
     return (
-        <ul className={`h-[79vh] px-5 py-5 overflow-scroll grid ${pending || error ? 'items-center justify-center' : ''}`}>
+        <ul className={`h-[79vh] px-5 py-5 overflow-scroll flex flex-col ${pending || error ? 'items-center justify-center' : ''}`}>
             {
                 pending ?
                     <li> <Loader /> </li> :
-                    error ?
-                        <li className="text-xl italic text-red-700">Something get wrong</li> :
-                        chatData?.length ?
-                            chatData?.map((el) => el.typeMessage === 'textMessage' ? el.type === 'incoming' ?
-                                <IncomeMessage key={el.idMessage} el={el} />
-                                :
-                                <OutgoingMessage key={el.idMessage} el={el} /> : null
-                            ) : null
+                    chatData?.length ?
+                        chatData?.map((el) => el.type === 'incoming' ?
+                            <IncomeMessage key={el.idMessage} el={el} />
+                            :
+                            <OutgoingMessage key={el.idMessage} el={el} />
+                        ) : null
             }
         </ul>
     )

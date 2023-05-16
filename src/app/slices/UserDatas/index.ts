@@ -5,7 +5,7 @@ import { getAccountChats } from "../../actions/getAccountChats";
 
 
 type UserDatasInitialState = {
-    chats: accountChatsType[],
+    chats: accountChatsType[] | null,
     pending: boolean,
     error: null | string | undefined
 }
@@ -13,7 +13,7 @@ type UserDatasInitialState = {
 const initialState: UserDatasInitialState = {
     pending: false,
     error: null,
-    chats: []
+    chats: null
 }
 
 const userDatas = createSlice({

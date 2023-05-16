@@ -52,7 +52,7 @@ const ContactList = () => {
           pending ? <div className='h-[100vh] flex justify-center items-center'> <Loader /></div> :
             <ul className='h-[100vh] overflow-y-scroll mt-3'>
               {
-                chats.map(el => (
+                chats?.map(el => (
                   <ContactListItem key={el.id} el={el} />
                 ))
               }
@@ -61,7 +61,7 @@ const ContactList = () => {
 
       </div>
       <div className={`dropdown_gen  ${newChatDropdown ? 'dropdown_gen_active' : ''}`}>
-        <NewChatDropDown setCloseDrop={setNewChatDropdown} />
+        <NewChatDropDown setNewChatDropdown={setNewChatDropdown} />
       </div>
       <div className={`dropdown_gen  ${profileDropdown ? 'dropdown_gen_active' : ''}`}>
         <ProfileInfoDropdown setCloseDrop={setProfileDropdown} />
