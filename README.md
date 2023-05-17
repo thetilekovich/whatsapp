@@ -1,12 +1,8 @@
-<a href="https://aimeos.org/">
+
     <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
-</a>
 
 # WhatsApp Web Clone
 
-[![Total oads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://thetilekovich.github.io/thetilekovich)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
-[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
 
 [WhatsApp](https://whatsapp.com/) Самая популярное приложение в мире. Спросите почему? Eго эфективность, быстрыe и разные функционалы, удобность ценится пользователями уже больше 15 лет. [Я](https://thetilekovich.github.io/thetilekovich) как frontend разработчик решил сделать копию [WhatsApp Web](https://web.whatsapp.com). В этом документации расскажу вам как работать с этим проектом. Спасибо!
