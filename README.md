@@ -1,46 +1,165 @@
-# Getting Started with Create React App
+<a href="https://aimeos.org/">
+    <img src="https://aimeos.org/fileadmin/template/icons/logo.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+</a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+# WhatsApp Web Clone
 
-## Available Scripts
+[![Total oads](https://poser.pugx.org/aimeos/aimeos-typo3/d/total.svg)](https://thetilekovich.github.io/thetilekovich)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aimeos/aimeos-typo3/?branch=master)
+[![License](https://poser.pugx.org/aimeos/aimeos-typo3/license.svg)](https://packagist.org/packages/aimeos/aimeos-typo3)
 
-In the project directory, you can run:
 
-### `npm start`
+[WhatsApp](https://whatsapp.com/) Самая популярное приложение в мире. Спросите почему? Eго эфективность, быстрыe и разные функционалы, удобность ценится пользователями уже больше 15 лет. [Я](https://thetilekovich.github.io/thetilekovich) как frontend разработчик решил сделать копию [WhatsApp Web](https://web.whatsapp.com). В этом документации расскажу вам как работать с этим проектом. Спасибо!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Ссылки на полезные информации
 
-### `npm test`
+- [Мне интересно:](#Github-pages)
+    - [Посетить сайт на Github-Pages.](#github-pages)
+    - [Локально? Не проблема!](#how-to-install)
+- [Установка](#dependienses)
+    - [Скачивание и запуск](#downloading)
+    - [Какие зависимости используется?](#technologies)
+- [Структура папок](#structure)
+    - [](#seo-friendly-urls)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Что вас интересует?
 
-### `npm run build`
+### Github-pages
+- Если хотите увидеть только результат, [кликните сюда](https://thetilekovich.github.io/whatsapp)
+- Если вам нужно запустить локально, тогда об это на [следующем разделе](#Установка).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Установка
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Во-первых у вас на компьютера должен быть установлен git, nodejs, npm
+#### Как проверить установлен ли у меня `git`, `nodejs`, `npm`
+Запустите терминал на вашем компьютере и напишите следующие команды:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+    git -v
+    git version 2.29.2
+    npm -v
+    9.2.0
+    node -v
+    v18.13.0
+```
+Если в ответ выводит цифры как в примере, значит у вас установлен и можете продолжить. А если терминал показывает ошибку, кликните ссылки внизу и продолжайте по инструкцию:
+1. [Git](https://git-scm.com/downloads)
+2. [Node.js](https://nodejs.org/en/download)
 
-### `npm run eject`
+После установки повторно сделайты команды которые мы ранее ввели и проверьте в наличии.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Теперь уверенно можем скачать проект через `git`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/thetilekovich/whatsapp.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# это займет немного времени...
+```
+После скачивание вам нужно открыть эту папку в **VScode** или в любом другом **IDE**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Узнать какие  зависимости есть вы можете посмотреть в файле `package.json` в корне проекта (объект `dependencies`). А чтобы установить этих библиотек, нужно написать команду:
 
-## Learn More
+```bash
+npm install
+```
+Если у вас установлен yarn вы можете написать команду:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+yarn add .
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+***Note***: _Помните, чтобы все команды работали, ваш терминал должен находится в правильном пути и внутри проекта_
+
+После немного времени уставновится все библиотеки проекта и вам остаётся только запустить его локально. 
+
+Если вы откроете файле `package.json` можете увидеть объект `scripts` .
+Чтобы запустить эти скрипты вам нужно сделать команду на терминале:
+
+```json
+    npm run <<script key>>
+```
+
+Если у вас yarn вы можете сделать следующую команду:
+```json
+    yarn run <<script key>>
+```
+
+#### А чтобы запустить проект на `localhost:3000` вам всего лишь нужно сделать команду:
+```bash
+npm start 
+```
+или 
+
+```bash
+yarn run start 
+```
+
+Теперь можете открыть любой вам удобный браузер и перейти по ссылке `http:\\localhost:3000` и посмотреть проект, если хотите изменить что-то, изменение сразу будут видны в браузере.
+
+
+### Библиотеки и зависимости
+
+| Библиотеки      | Версии  |
+| -------------   | --------|
+| reduxjs/toolkit | ^1.9.5  |
+| axios           | ^1.4.0  |
+| react           | ^18.2.0 |
+| react-dom       | ^18.2.0 |
+| react-redux     | ^8.0.5  |
+| typescript      | ^4.9.5  |
+| web-vitals      | ^2.1.4  |
+
+
+## Пришло время поговорить о структуре папок
+
+- public
+    - index.html
+-`src`
+    - `api`
+        - **constants.ts** - _В этом файле находится апи ключ для доступа `API`_
+        - **greenApi.ts** - _Здесь находится все апи адреса которые использовали в приложении_
+    - `app`
+        - `actions`
+            - _Здесь асинхронные функции которые получают данные из `API` адресов_
+        - `slices`
+            - _В этой папке находится `reducers`_
+        - **hooks.ts** - _Типизированные хуки_
+        - **store.ts** - _Файле создал `store`_
+    - `components`
+        - Loader
+            - **index.tsx** - _Простая анимация загрузки_
+        - Development
+            - **index.tsx** - _Чтобы ещё не разработанные страницы не были пустыми нужно показать эту страницу_
+        - `dropdowns` - _Папка где хранится компоненты `всплывающие dropdown`_
+            - ChatOptionDropdown
+            - NewChatDropdown
+            - OptionDropdown
+            - ProfileInfoDropdown
+        - `Messages`
+            - **IncomeMessage.tsx** - _Входящие сообщении в чате_
+            - **OutgoingMessage.tsx** - _Исходящие сообщении в чате, отличается только стили_
+        - `UserChat`
+            - UserChatBody - _Тело чата где использую `IncomeMessage` и `OutgoingMessage`_
+            - UserChatFooter - _Инпут и кнопка для отправки новой сообщений_
+            - UserChatNotActive - _Когда никакой чат не активный, то есть не выбран пользователем, отображается картина_
+            - **LaptopUserChat.tsx** - _Адаптация и фулскрин режим_
+            - **MobileUserChat.tsx** - _Адаптация на моб. версию, скрыть - `UserNotActiveChat`_
+        - **`ContactList`** - _Список контактов_
+            - **index.tsx**
+            - **ContactListItem.tsx** - _Один контакт_
+    - `pages`
+        - Login Page 
+            - **index.tsx** - _Страница авторизации через QR-код_
+        - User Page
+            - **index.tsx** - _Страница после авторизации_
+    - `statics` - _Статичные данные- иконки и фото_
+        - icon
+        - images
+    - `types` - _Интерфейсы и типы для всего проекта, в дальнейшем можно разделить на несколько файлов._
+        - **index.ts**
+    - **App.tsx**
+    - **index.css**
+    - **index.jsx** - _Корень, где подключил на `html` и подключил `store`_
+
+# Спасибо желаю удачи!
