@@ -8,14 +8,14 @@ import './style.css'
 
 const UserPage = () => {
   const dispatch = useAppDispatch()
-  const {chats} = useAppSelector(s => s.userDatas)
+  const { chats } = useAppSelector(s => s.userDatas)
 
-  async function getChats(){
+  async function getChats() {
     await dispatch(getAccountChats())
-    if(chats){
-      setTimeout(() => getChats(), 2000)
-    }
-    return
+    // if (chats) {
+    //   getChats()
+    // }
+    
   }
 
 

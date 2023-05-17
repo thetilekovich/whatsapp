@@ -40,7 +40,7 @@ const NewChatDropDown = ({ setNewChatDropdown }: { setNewChatDropdown: (a: boole
         <h1 className='text-primary text-2xl font-medium mx-5'>Новый чат</h1>
       </header>
       <section className='bg-body h-full flex flex-col px-5 justify-start items-center pt-20'>
-        <h1 className='text-primary text-xl text-center mb-20'>Напишите номер телефона с кодом страны и чтобы начать новый чат</h1>
+        <h1 className='text-primary text-xl text-center mb-20'>Напишите номер телефона с кодом страны и нажмите чтобы начать новый чат</h1>
         <div className='w-full'>
           <input
             onChange={(el) => dispatch(setInputValue(el.target.value))}
@@ -51,10 +51,10 @@ const NewChatDropDown = ({ setNewChatDropdown }: { setNewChatDropdown: (a: boole
         </div>
         <div className='flex flex-col items-center justify-center  mt-14'>
           {
-            hasWhatsapp || hasWhatsapp === null ? null : <h1 className='text-2xl text-red-600'>Number has not whatsapp</h1>
+            hasWhatsapp || hasWhatsapp === null ? null : <h1 className='text-2xl text-red-600'>У этого номера телефона не зарегистрирован WhatsApp</h1>
           }
           {
-            hasWhatsapp ? <h1 className='text-2xl text-green-600'>Found!</h1> : null
+            hasWhatsapp ? <h1 className='text-2xl text-green-600'>Нашли!</h1> : null
           }
           {
             loading ? <Loader /> : null

@@ -11,7 +11,7 @@ export const getChatsHistory = createAsyncThunk<chatHistoryType[], string>
   ("userDatas/userChatData",
     async (chatId, thunkAPI) => {
       try {
-        const res = await axios.post(chatHistoryApi, { "chatId": chatId})
+        const res = await axios.post(chatHistoryApi, { "chatId": chatId, "count": 100})
         const data = (await res).data
         console.log(await data)
         return data.reverse()

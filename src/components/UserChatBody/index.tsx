@@ -18,12 +18,10 @@ const UserChatBody = () => {
 
     useEffect(() => {
         getChatHistoryFunc()
-    }, [])
+    }, [activeChat])
     return (
-        <ul className={`h-[79vh] px-5 py-5 overflow-scroll flex flex-col ${pending || error ? 'items-center justify-center' : ''}`}>
+        <ul className={`h-[79vh] px-5 py-5 overflow-scroll flex flex-col ${pending || error ? 'items-center' : ''}`}>
             {
-                pending ?
-                    <li> <Loader /> </li> :
                     chatData?.length ?
                         chatData?.map((el) => el.type === 'incoming' ?
                             <IncomeMessage key={el.idMessage} el={el} />

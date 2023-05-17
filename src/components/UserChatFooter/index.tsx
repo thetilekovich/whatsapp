@@ -13,7 +13,7 @@ const UserChatFooter = () => {
         const res = await sendMessage(chatId, message)
         if(res){
             setMessage('')
-            setTimeout(() => dispatch(getChatsHistory(activeChat)),  1000)
+            setTimeout(() => dispatch(getChatsHistory(activeChat)),  2000)
         }else{
             setMessage('We can\'t send your message')
         }
