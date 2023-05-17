@@ -1,7 +1,7 @@
 {
   "name": "whatsapp-clone",
   "version": "0.1.0",
-  "homepage": "https://thetilekovich.github.io/whatsapp-clone",
+  "homepage": "https://thetilekovich.github.io/whatsapp",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
