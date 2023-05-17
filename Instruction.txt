@@ -1,0 +1,9 @@
+Инструкция для запуска проекта локально
+
+1. git clone https://github.com/thetilekovich/whatsapp
+2. npm install || yarn add .
+3. npm run start || npm start || yarn run start
+4. http://localhost:3000
+
+Также проект запущен на Github Pages
+Ссылка : https://thetilekovich.github.io/whatsapp
